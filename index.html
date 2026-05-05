@@ -20,9 +20,10 @@ html,body{
   background:#000;
 }
 
+/* 🔥 FIX MOBILE HEIGHT */
 .page{
   width:100%;
-  height:100vh;
+  height:100svh;
   overflow:hidden;
   background:#000;
   color:#fff;
@@ -30,7 +31,7 @@ html,body{
   flex-direction:column;
 }
 
-/* TOPO - GRÁFICO */
+/* 🔴 GRÁFICO */
 .graph{
   width:100%;
   height:45vh;
@@ -43,30 +44,30 @@ html,body{
   width:100%;
   height:100%;
   object-fit:cover;
-  object-position:center -85px;
+  object-position:center -85px; /* AJUSTE FINO */
   filter:brightness(.95) contrast(1.05);
 }
 
+/* FADE PARA JUNTAR */
 .graph::after{
   content:"";
   position:absolute;
   bottom:0;
   left:0;
   width:100%;
-  height:85px;
+  height:90px;
   background:linear-gradient(to bottom, transparent, #000);
   z-index:3;
 }
 
-/* CONFIRMADOS */
+/* 🟢 CONFIRMADOS */
 .confirmados{
   width:100%;
   height:34vh;
   overflow:hidden;
   position:relative;
-  margin-top:-35px;
+  margin-top:-38px; /* COLAGEM */
   z-index:1;
-  padding:0;
   background:#000;
 }
 
@@ -74,8 +75,6 @@ html,body{
   width:100%;
   height:100%;
   overflow:hidden;
-  border:none;
-  box-shadow:none;
   background:#000;
   position:relative;
 }
@@ -83,12 +82,12 @@ html,body{
 .confirmados-box img{
   position:absolute;
   width:100%;
-  height:auto;
   left:0;
-  top:-55vh;
+  top:-55vh; /* AJUSTE FINO */
   filter:brightness(1.05) contrast(1.05);
 }
 
+/* LABEL */
 .label{
   position:absolute;
   top:12px;
@@ -104,12 +103,11 @@ html,body{
   box-shadow:0 0 10px rgba(88,255,75,.25);
 }
 
-/* AÇÃO */
+/* ⚡ AÇÃO */
 .action{
   width:100%;
   flex:1;
-  min-height:0;
-  padding:8px 14px 12px;
+  padding:10px 14px 14px;
   display:flex;
   flex-direction:column;
   justify-content:space-between;
@@ -121,10 +119,11 @@ html,body{
   z-index:4;
 }
 
+/* BONUS */
 .bonus{
   width:100%;
   max-width:370px;
-  padding:9px 12px;
+  padding:10px 12px;
   border-radius:14px;
   background:linear-gradient(90deg,#ff7a00,#ffc400);
   color:#111;
@@ -139,6 +138,7 @@ html,body{
   50%{transform:scale(1.035);}
 }
 
+/* COPY */
 .copy{
   font-size:13px;
   font-weight:800;
@@ -147,6 +147,7 @@ html,body{
   max-width:360px;
 }
 
+/* BOTÕES */
 .buttons{
   width:100%;
   max-width:370px;
@@ -156,7 +157,7 @@ html,body{
 }
 
 .btn{
-  height:46px;
+  height:48px;
   border-radius:14px;
   text-decoration:none;
   display:flex;
@@ -167,6 +168,7 @@ html,body{
   text-transform:uppercase;
 }
 
+/* BOTÃO PRINCIPAL */
 .btn-main{
   color:#fff;
   background:linear-gradient(135deg,#ff2424,#ff8500);
@@ -174,12 +176,14 @@ html,body{
   animation:shake 2s infinite;
 }
 
+/* BOTÃO SECUNDÁRIO */
 .btn-alt{
   color:#fff;
   background:rgba(255,255,255,.09);
   border:1px solid rgba(255,255,255,.25);
 }
 
+/* ANIMAÇÃO */
 @keyframes shake{
   0%,88%,100%{transform:translateX(0);}
   90%{transform:translateX(-2px);}
@@ -188,32 +192,29 @@ html,body{
   96%{transform:translateX(2px);}
 }
 
-/* TELAS BAIXAS */
+/* 📱 MOBILE AJUSTADO (NÃO QUEBRA MAIS) */
 @media(max-height:700px){
+
   .graph{
     height:43vh;
   }
 
   .graph img{
-    object-position:center -35px;
-  }
-
-  .graph::after{
-    height:75px;
+    object-position:center -85px; /* MANTIDO */
   }
 
   .confirmados{
     height:35vh;
-    margin-top:-32px;
+    margin-top:-38px;
   }
 
   .confirmados-box img{
-    top:-46vh;
+    top:-55vh; /* MANTIDO */
   }
 
   .bonus{
     font-size:12.5px;
-    padding:7px 10px;
+    padding:8px;
   }
 
   .copy{
@@ -221,32 +222,8 @@ html,body{
   }
 
   .btn{
-    height:41px;
+    height:42px;
     font-size:11px;
-  }
-}
-
-/* TELAS ALTAS */
-@media(min-height:820px){
-  .graph{
-    height:46vh;
-  }
-
-  .graph img{
-    object-position:center -55px;
-  }
-
-  .confirmados{
-    height:33vh;
-    margin-top:-42px;
-  }
-
-  .confirmados-box img{
-    top:-49vh;
-  }
-
-  .action{
-    padding-bottom:18px;
   }
 }
 </style>
@@ -256,20 +233,20 @@ html,body{
 
 <div class="page">
 
-  <!-- GRÁFICO -->
+  <!-- 🔴 GRÁFICO -->
   <div class="graph">
     <img src="Banner.png" alt="Gráfico">
   </div>
 
-  <!-- CONFIRMADOS -->
+  <!-- 🟢 CONFIRMADOS -->
   <div class="confirmados">
     <div class="confirmados-box">
       <div class="label">✓ Confirmados M-Pesa</div>
-      <img src="Banner.png" alt="Confirmados M-Pesa">
+      <img src="Banner.png" alt="Confirmados">
     </div>
   </div>
 
-  <!-- AÇÃO -->
+  <!-- ⚡ AÇÃO -->
   <div class="action">
 
     <div class="bonus">
