@@ -3,7 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oferta</title>
+<title>Oferta Especial</title>
+
+<!-- 🚀 INÍCIO DO PIXEL DA META -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e);
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://facebook.net');
+fbq('init', '795169496756642');
+fbq('track', 'PageView');
+
+// Função para rastrear o clique e avisar o Facebook
+function rastrearCadastro() {
+  fbq('track', 'Lead');
+}
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://facebook.com"
+/></noscript>
+<!-- 🚀 FIM DO PIXEL DA META -->
 
 <style>
 *{
@@ -237,16 +260,17 @@ html,body{
     </div>
 
     <div class="copy">
-      Regista agora, ativa a conta e aproveita antes que a oportunidade passe.
+      Regista a tua conta agora e ativa com depósito via M-Pesa ou E-Mola para receber o bónus de boas-vindas.
     </div>
 
     <div class="buttons">
-      <a href="https://media1.placard.co.mz/redirect.aspx?pid=10623&bid=1690" class="btn btn-main">
+      <!-- Botões configurados com o seu link direto exato e rastreamento do Pixel -->
+      <a href="https://media1.placard.co.mz/redirect.aspx?pid=10623&bid=1690" target="_blank" onclick="rastrearCadastro()" class="btn btn-main">
         Registar Agora
       </a>
 
-      <a href="https://media1.placard.co.mz/redirect.aspx?pid=10623&bid=1690" class="btn btn-alt">
-        Bonus
+      <a href="https://media1.placard.co.mz/redirect.aspx?pid=10623&bid=1690" target="_blank" onclick="rastrearCadastro()" class="btn btn-alt">
+        Bónus
       </a>
     </div>
 
